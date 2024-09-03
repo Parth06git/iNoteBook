@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# About the Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+iNoteBook is a web application for writing notes online and storing it on MongoDB database.
+This is the first project where I start to learn Backend using MERN stack.
+This project mainly focus on backend.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run both`
+
+Runs the app and also start the server for this application.
 
 ### `npm start`
 

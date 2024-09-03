@@ -1,0 +1,461 @@
+{
+    "info": {
+        "_postman_id": "6d01a752-ef76-4b80-aaa4-201db98f2c0d",
+        "name": "Natours",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Tours",
+            "item": [
+                {
+                    "name": "Get all Tours",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjcxNGMwNGIyOTI4Y2RiZjNmYThiYzIiLCJpYXQiOjE3MTg3MDEwNjEsImV4cCI6MTcxODc4NzQ2MX0.jlD6I522pAPPNg4hea6vKPO_VEw_HgXcXNColDOBuKo"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Create Tour",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Prachi Trivedi\",\n  \"maxGroupSize\": 20,\n  \"difficulty\": \"easy\",\n  \"price\": 1197,\n  \"priceDiscount\": 120,\n  \"summary\": \"Tests Tour\",\n  \"imageCover\": \"tour-4-cover.jpg\",\n  \"ratingsAverage\": 4.9\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Tour",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours/dfsgvdfgs",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours",
+                                "dfsgvdfgs"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Update Tour",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours/666038ff7b2db949c2f17c48",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours",
+                                "666038ff7b2db949c2f17c48"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"ratingsAverage\": 4.9\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Tour",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours/666dccb464aa8ef1cc3933a1",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours",
+                                "666dccb464aa8ef1cc3933a1"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Reference Get all Tours",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours?fields=name,duration,difficulty,price",
+                            "query": [
+                                {
+                                    "key": "duration[gte]",
+                                    "value": "5",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "difficulty",
+                                    "value": "easy",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "price[lt]",
+                                    "value": "1500",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sort",
+                                    "value": "price,ratingsAverage",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "name,duration,difficulty,price"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "4",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": "5",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sort",
+                                    "value": "-ratingsAverage,price",
+                                    "disabled": true
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Top 5 Tours",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours/top-5-tours",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours",
+                                "top-5-tours"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Tours Stats",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours/tours-stats",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours",
+                                "tours-stats"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Monthly Plan",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/tours/monthly-plan/2021",
+                            "path": [
+                                "api",
+                                "v1",
+                                "tours",
+                                "monthly-plan",
+                                "2021"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "Get all Users",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/users",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Create User",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/users",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Test User\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get User",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/users/1",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "1"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/users/9",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "9"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/users/9",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "9"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "SignUp",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/users/signup",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "signup"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Parth\",\n  \"email\": \"parth1@gmail.com\",\n  \"password\": \"Pass1234\",\n  \"passwordConfirm\": \"Pass1234\",\n  \"passwordChangedAt\": \"2024-06-16\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "127.0.0.1:4000/api/v1/users/login",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "login"
+                            ],
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"parth@gmail.com\",\n  \"password\": \"Pass1234\"\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
